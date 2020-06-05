@@ -1,0 +1,390 @@
+:root{
+    --clr-text: #000000;
+    --clr-primary: #f0c544;
+    --clr-primary-dark: #145514;
+    --clr-accent: #145514;
+    --clr-accent-dark: #5d3566;
+
+    --ff-title: 'Josefin Sans', sans-serif;
+    --ff-serif: "Roboto", sans-serif;
+
+}
+
+/*Border Box*/
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--ff-serif);
+    color: var(--clr-text);
+    font-size: 1.125rem;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+img{
+    display: inline-block;
+    max-width: 95%;
+}
+
+section{
+    padding: 1em 1em;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+/*Typography*/
+
+h1,h2, h3, h4, p{
+    margin: 0;
+    line-height: 1.5em;
+}
+
+h2, h3{
+    font-family: var(--ff-title);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 2rem;
+    padding: 0 0.5em;
+}
+
+p{
+    margin-bottom: 1.5em;
+}
+
+p:last-child(
+    margin-bottom: 0;
+)
+
+.section-title-small{
+    font-size: 3rem;
+}
+
+.section-title-small{
+    font-size: 1.2em;
+    display: block;
+}
+
+.text-primary{
+    color: var(--clr-primary);
+}
+
+.logo{
+    font-family: var(--ff-logo);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*NAVIGATION*/
+
+header{
+    padding: 1em 0 2em;
+}
+
+.nav-bar-col{
+    background-color: #224f20;
+    border-bottom: 4px solid #f0c544;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: inline-block;
+    padding: 0.6em;
+    color: var(--clr-primary);
+    text-decoration: none;
+    line-height: 0.5em;
+}
+
+nav a:hover,
+nav a:focus {
+    color: white;
+    text-decoration: underline;
+}
+
+/*BUTTONS*/
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn{
+    padding: .75em 2.5em;
+    color: black;
+    text-decoration: none;
+    font-family: var(--ff-title);
+    color: white;
+    display: inline-block;
+    margin: 0.5em 0.5em;
+    border-radius: 0.25em;
+}
+
+.btn + .btn{
+    margin-left: 0.35em;
+}
+
+.btn-primary{
+    background: var(--clr-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+    background: var(--clr-primary)
+}
+
+.btn-accent{
+    background: var(--clr-primary)
+}
+
+.btn-accent:hover,
+.btn-accent:focus{
+    background: var(--clr-primary-dark)
+}
+
+/*HOME PAGE STYLES*/
+
+.hero{
+    background-color: #555;
+    background-image: url(https://i.postimg.cc/zXMjFTn9/Copy-of-Untitled-1.png);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: contain;
+    color: white;
+    text-align: center;
+    padding: 15vh 0em;
+}
+
+.about-us{
+    background: var(--clr-accent);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0;
+}
+
+.about-us__intro{
+background-image: url(https://www.naturevalley.com/wp-content/uploads/2020/01/10_GA_190522_433.jpg);
+background-size: cover;
+background-color: #999;
+background-blend-mode: multiply;
+padding: 8em 1em 1.5rem;
+margin-bottom: 1em;
+}
+
+.about-us__body{
+    padding: 1em 1em;
+}
+
+.about-us__body p:after{
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 5px;
+        border-bottom: 1px solid var(--clr-primary);
+}
+
+.products{
+   display: flex;
+   flex-direction: column; 
+   max-width: 30rem;
+   margin: 0 auto;
+}
+
+.product{
+border-radius: .35em;
+overflow: hidden;
+box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+margin-bottom: 2em;
+}
+
+.product:last-of-type{
+    margin-bottom: 3em;
+}
+
+.product__content{
+    padding: 1.5em;
+}
+
+.product__title{
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+footer{
+    background: var(--clr-primary-dark);
+    padding: 2em 0em;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+footer a, li, img{
+    color: var(--clr-primary);
+    padding: 0.3em;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1em;
+    }
+
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.8em;
+}
+
+
+.social-icon {
+    max-width: 48px;
+    padding: 0;
+}
+
+.social:last-of-type{
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 750px) {
+    
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    section{
+        padding: 4em 7em;
+    }
+
+    .hero{
+        background-color: #555;
+        background-image: url(https://i.postimg.cc/gj9ryQR7/Webp-net-resizeimage-6.png);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-size: 2900px;
+        color: white;
+        text-align: center;
+        padding: 15vh 0em;  
+    }
+
+    .btn-group{
+        flex-direction: row;
+        justify-content: center;
+        }
+
+    .btn + .btn{
+        margin-left: 0.5em;
+    }
+
+    .about-us{
+        flex-direction: row;
+    }
+
+    .about-us__intro,
+    .about-us__body{
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3em 3em;
+        margin-bottom: 0;
+    }
+
+    .about-us__intro{
+        text-align: right;
+    }
+
+    .about-us__intro > * {
+        max-width: 27rem;
+        margin-left: auto;
+    }
+
+    .about-us__body{
+        text-align: left;
+    }
+
+    .about-us__body > * {
+        max-width: 27rem;
+        margin-right: auto;
+    }
+
+    .about-us__body p:after{
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 5px;
+        border-bottom: 1px solid var(--clr-primary);
+}
+
+    .order-online > * {
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .products{
+        flex-direction: row;
+        max-width: 1200px;
+        padding: 0 5em;
+        margin-bottom: 4em;
+    }
+
+    .product{
+        margin: 0;
+        flex: 0 1 33%;
+    }
+
+    .product + .product{
+        margin-left: 1em;
+    }
+
+    .product:last-of-type{
+        margin-bottom: 0;
+    }
+
+    .footer-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
